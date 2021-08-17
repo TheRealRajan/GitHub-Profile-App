@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #0d1821;
+  color: #dddddd;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.main {
+  display: flex;
+  align-items: center;
+  width: calc(100vw - 2rem);
+  /* margin: 0 2rem; */
+}
+.user-form {
+  /* width: 100%; */
+  width: 600px;
+  max-width: 90%;
+  margin: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.clear {
+  position: absolute;
+  /* top: 0.1rem; */
+  right: 0.5rem;
+  border: none;
+  background: transparent;
+  padding: 0.5rem 0.8rem;
+  color: #acacac;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.clear:hover {
+  color: #acacac;
+  font-weight: bold;
+}
+
+.user-form input {
+  width: 100%;
+  display: block;
+  background-color: rgb(34, 47, 68);
+  color: #cecece;
+  border: none;
+  border-radius: 1000px;
+  padding: 0.6rem 1rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.user-form input::placeholder {
+  color: #acacac;
+}
+
+.user-form input:focus {
+  outline: none;
+}
+
+.card {
+  width: 600px;
+  max-width: 90%;
+  background-color: rgb(32, 60, 102);
+  opacity: 0.8;
+  color: #f1f1f1;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.errorCard {
+  text-align: center;
+  background-color: rgb(32, 60, 102);
+  width: 600px;
+  color: rgb(160, 160, 160);
+  padding: 0.8rem;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.errorCard h2 {
+  color: #eee;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 5px solid #0d1821;
+  height: 120px;
+  width: 120px;
+}
+
+.user-info {
+  color: #eee;
+  margin-left: 2rem;
+}
+.user-info h2 {
+  margin-top: 0;
+}
+
+.user-info p {
+  font-size: 1rem;
+}
+
+.user-info ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 400px;
+}
+.user-info ul li {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+.user-info ul strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.repo {
+  text-decoration: none;
+  background-color: rgb(16, 35, 53);
+  color: #eee;
+  padding: 0.2rem 0.6rem;
+  border-radius: 500px;
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+@media (max-width: 550px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-form {
+    width: 90%;
+  }
+  .user-info {
+    align-items: center;
+    margin-left: 0;
+  }
+  h2 {
+    text-align: center;
+  }
+}
