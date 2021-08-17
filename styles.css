@@ -7,6 +7,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #0d1821;
+  background: linear-gradient(180deg, rgb(45, 50, 56), rgb(66, 77, 92));
   color: #dddddd;
   margin: 0;
   display: flex;
@@ -16,24 +17,21 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+
 .main {
   display: flex;
   align-items: center;
-  width: calc(100vw - 2rem);
-  /* margin: 0 2rem; */
+  width: 100%;
 }
 .user-form {
-  /* width: 100%; */
+  width: 100%;
   width: 600px;
-  max-width: 90%;
-  margin: 0 1.5rem;
   display: flex;
   justify-content: center;
   position: relative;
 }
 .clear {
   position: absolute;
-  /* top: 0.1rem; */
   right: 0.5rem;
   border: none;
   background: transparent;
@@ -50,11 +48,11 @@ body {
 .user-form input {
   width: 100%;
   display: block;
-  background-color: rgb(34, 47, 68);
+  background-color: rgb(34, 38, 46);
   color: #cecece;
   border: none;
   border-radius: 1000px;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.5rem;
   font-family: inherit;
   font-size: 0.9rem;
   font-weight: 500;
@@ -72,20 +70,20 @@ body {
 }
 
 .card {
-  width: 600px;
-  max-width: 90%;
-  background-color: rgb(32, 60, 102);
-  opacity: 0.8;
+  max-width: 600px;
+  background: linear-gradient(90deg, rgb(34, 41, 53), rgb(44, 51, 63));
   color: #f1f1f1;
   padding: 2rem 3rem;
   border-radius: 10px;
   display: flex;
   margin: 0 auto;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .errorCard {
   text-align: center;
-  background-color: rgb(32, 60, 102);
+  background: linear-gradient(rgb(34, 41, 53), rgb(44, 51, 63));
   width: 600px;
   color: rgb(160, 160, 160);
   padding: 0.8rem;
@@ -135,7 +133,8 @@ body {
 
 .repo {
   text-decoration: none;
-  background-color: rgb(16, 35, 53);
+  background-color: rgb(62, 70, 77);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
   color: #eee;
   padding: 0.2rem 0.6rem;
   border-radius: 500px;
@@ -146,14 +145,21 @@ body {
 }
 
 @media (max-width: 550px) {
+  .container {
+    padding: 0.2rem;
+  }
   .card {
     flex-direction: column;
     align-items: center;
   }
 
   .user-form {
-    width: 90%;
+    width: 100%;
   }
+  .user-form input {
+    margin-bottom: 1.3rem;
+  }
+
   .user-info {
     align-items: center;
     margin-left: 0;
